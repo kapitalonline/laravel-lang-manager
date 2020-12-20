@@ -1,0 +1,58 @@
+{
+    "name": "kapitalonline/laravel-lang-manager",
+    "description": "Laravel Dil Yönetim Sistemi",
+    "keywords": [
+        "kapitalonline",
+        "laravel-lang-manager"
+    ],
+    "homepage": "https://github.com/kapitalonline/laravel-lang-manager",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kapital Online",
+            "email": "info@ko.com.tr",
+            "homepage": "https://ko.com.tr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0",
+        "laravel-lang/lang": "~8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kapitalonline\\LaravelLangManager\\": "src",
+            "Kapitalonline\\LaravelLangManager\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kapitalonline\\LaravelLangManager\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kapitalonline\\LaravelLangManager\\LaravelLangManagerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLangManager": "Kapitalonline\\LaravelLangManager\\LaravelLangManagerFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
