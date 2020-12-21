@@ -32,12 +32,10 @@ class LaravelLangManagerServiceProvider extends ServiceProvider
 //            $this->publishes([
 //                base_path('vendor/laravel-lang/lang/json') => resource_path('lang/vendor/laravel-lang-manager'),
 //            ]);
-
         }
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'laravel-lang-manager');
-        $this->loadJsonTranslationsFrom(base_path('vendor/laravel-lang/lang/json') );
-
+        $this->loadJsonTranslationsFrom(base_path('vendor/laravel-lang/lang/json'));
     }
 
     public function register()
